@@ -14,12 +14,12 @@ You can add the plugin to your API by making the following request:
 ```shell
 # if your detector is running on tcp port
 $ curl -X POST http://kong:8001/services/{name}/plugins \
-    --data "name=kong-safeline" \
+    --data "name=safeline" \
     --data "config.host=your_detector_host" \
     --data "config.port=your_detector_port"
 # if your detector is running on unix socket
 $ curl -X POST http://kong:8001/services/{name}/plugins \
-    --data "name=kong-safeline" \
+    --data "name=safeline" \
     --data "config.host=unix:/path/to/your/unix/socket"
 ```
 

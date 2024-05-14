@@ -9,6 +9,9 @@ description = {
    license = "Apache License 2.0",
    maintainer = "Xiaobing Wang <xiaobing.wang@chaitin.com>"
 }
+dependencies = {
+   "lua-resty-t1k"
+}
 build = {
    type = "builtin",
    modules = {
