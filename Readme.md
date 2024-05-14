@@ -26,3 +26,9 @@ $ curl -X POST http://kong:8001/services/{name}/plugins \
 ## Test
 You can test the plugin by sending a request to your API with malicious content. If the request is blocked, you will receive a `403 Forbidden` response.
 
+```shell
+$ curl -X POST http://kong:8000?1=1%20and%202=2
+
+# you will receive a 403 Forbidden response
+{"code": 403, "success":false, "message": "blocked by Chaitin SafeLine Web Application Firewall", "event_id": "8b41a021ea9541c89bb88f3773b4da24"}
+```
