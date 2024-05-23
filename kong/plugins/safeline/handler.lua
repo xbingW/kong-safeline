@@ -38,7 +38,7 @@ function SafelineHandler:access(conf)
         if result.action == t1k_constants.ACTION_BLOCKED then
             local msg = fmt(blocked_message, result.status, result.event_id)
             kong.log.debug("blocked by safeline: ",msg)
-            return kong.response.exit(403, msg)
+            return kong.response.exit(result.status, msg)
         end
     end
 end
